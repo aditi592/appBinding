@@ -1,0 +1,16 @@
+<div class="grid-container">
+    <div class="grid-item">First Name<input type="text" [(ngModel)] ="f" #firstName>{{fname}} </div>
+    <div class="grid-item">Last Name<input  ngModel pattern="[a-zA-Z ]*" 
+                        [(ngModel)]="l" #lastName >{{lname}} </div>
+    <div class="grid-item"> Mobile No<input  ngModel pattern="[0-9]*" 
+                        [(ngModel)]="m" #mobileNo>{{mno}}</div>
+    <div class="grid-item"> Address <textarea ng-model="myTextarea" 
+                        [(ngModel)]="a" #addRess></textarea>{{add}}</div>
+    
+    <div class="grid-item">
+          <button type="button" [disabled]="d"
+               (click) = "update(firstName.value,lastName.value,mobileNo.value,addRess.value)" 
+          class="btn btn-primary">Show value!</button>
+    </div>
+  
+  </div>
